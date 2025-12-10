@@ -19,9 +19,7 @@ export default async function page({ params }: { params: Params }) {
   return (
     <div className="flex flex-col min-h-screen items-center justify-center bg-zinc-100 font-sans dark:bg-black">
       <Header />
-      {/*content*/}
       <ProjectDetail project={project} />
-      <CTA />
       <Footer />
     </div>
   );

@@ -1,3 +1,8 @@
+"use client";
+import { MoveUpRight } from "lucide-react";
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+
 const services = [
   {
     title: "Web Development",
@@ -15,16 +20,6 @@ const services = [
       "Building secure, scalable APIs that connect your systems, automate workflows, and power your digital products.",
   },
   {
-    title: "Hotspot Billing Installation",
-    description:
-      "Setup and configure reliable Wi-Fi billing solutions with user access control, payment integration, and usage analytics.",
-  },
-  {
-    title: "POS System Installation",
-    description:
-      "Complete retail and inventory management systems tailored for hardware, fashion, and supermarket businesses.",
-  },
-  {
     title: "System Integration",
     description:
       "Integrate payment gateways, CRMs, or third-party tools to streamline your business processes and reduce manual work.",
@@ -32,38 +27,73 @@ const services = [
 ];
 
 export default function Services() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleOpen = (index: number) => {
+    setOpenIndex((prev) => (prev === index ? null : index));
+  };
   return (
-    <div className="w-full bg-white dark:bg-black border-b-2 border-black z-50">
-      <div className="max-w-6xl mx-auto flex flex-col justify-center md:border-x-2 border-black">
+    <div className="w-full bg-purple-50 dark:bg-background border-b-2 border-black dark:border-accent">
+      <div className="max-w-6xl mx-auto flex flex-col justify-center md:border-x-2 border-black dark:border-accent">
         {/* Header */}
-        <div className="border-b-2 border-black p-4 sm:p-6 md:p-12">
-          <h1 className="text-2xl sm:text-3xl font-semibold leading-tight sm:leading-10 tracking-tight text-black dark:text-zinc-50">
-            My Services
+        <div className="p-4 sm:p-6 md:p-12">
+          <h1 className="text-xl md:text-2xl sm:text-3xl font-semibold leading-tight sm:leading-10 tracking-tight text-black dark:text-zinc-50">
+            What I can do for your Business
           </h1>
         </div>
 
-        {/* Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-3">
+        <div className="w-full">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`p-4 sm:p-6 md:p-12 border-black ${
+              className={`group p-4 sm:p-6 md:p-12 border-black hover:bg-yellow-400 transition-all duration-700 ease-in-out dark:border-accent flex flex-col space-y-2 ${
                 // Mobile: border-b on all except last
                 index < services.length - 1 ? "border-b-2 md:border-b-0" : ""
               } ${
                 // Desktop: border-b on top row (first 3)
                 index < 3 ? "md:border-b-2" : ""
-              } ${
-                // Desktop: border-r on all except last column
-                index % 3 !== 2 ? "md:border-r-2" : ""
               }`}
             >
-              <h2 className="text-lg sm:text-xl font-bold mb-2 text-black dark:text-zinc-100">
-                {service.title}
-              </h2>
-              <p className="text-sm sm:text-base text-zinc-700 dark:text-zinc-300 leading-relaxed">
-                {service.description}
-              </p>
+              <div
+                className="flex items-center justify-between cursor-pointer"
+                onClick={() => handleOpen(index)}
+              >
+                <div className="flex items-center gap-4 md:gap-8 dark:group-hover:text-background">
+                  <span className="">0{index + 1}</span>
+                  <h1 className="text-md md:text-2xl font-bold">
+                    {service.title}
+                  </h1>
+                </div>
+                <motion.div
+                  className="p-2 border-black dark:border-background text-black rounded-full bg-yellow-500 group-hover:bg-purple-600 group-hover:text-gray-100 transition-colors duration-300"
+                  animate={{ rotate: openIndex === index ? 90 : 0 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                >
+                  <MoveUpRight className="w-6 h-6" />
+                </motion.div>
+              </div>
+              {/*content*/}
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <motion.p
+                      initial={{ y: -10, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      exit={{ y: -10, opacity: 0 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                      className="text-sm md:text-lg pt-2 dark:group-hover:text-background"
+                    >
+                      {service.description}
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
