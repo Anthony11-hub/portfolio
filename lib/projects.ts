@@ -38,6 +38,7 @@ export interface Project {
   image: string[];
   tags: string[];
   year: string;
+  duration: string;
   techStack: {
     frontend: TechStack[];
     backend: TechStack[];
@@ -57,9 +58,10 @@ export const projects: Project[] = [
     description:
       "A complete Wi-Fi management and billing system featuring automated MikroTik user control, subscription packages, real-time monitoring, and seamless M-PESA payment tracking for hotspot businesses.",
     link: "/projects/easyconnect",
-    image: ["/shots/Galaxy-Fold2-live.easyconnectke.online.png"],
+    image: ["/shots/easyconnect-shot-1.png", "/shots/easyconnect-shot-2.png"],
     tags: ["SAAS", "FullStack", "Networking"],
     year: "2025",
+    duration: "3 months",
     techStack: {
       frontend: [
         { name: "Next.js", icon: Code2 },
@@ -89,9 +91,10 @@ export const projects: Project[] = [
       "A modern POS and inventory management system offering multi-branch support, detailed sales reports, role management, and real-time analytics tailored for retail businesses.",
     link: "/projects/zeninpos",
     url: "https://www.zeninpos.store",
-    image: ["/shots/zenin-shot-1.png"],
+    image: ["/shots/zenin-shot-1.png", "/shots/zenin-shot-2.png"],
     tags: ["SAAS", "FullStack", "Retail"],
     year: "2025",
+    duration: "4 months",
     techStack: {
       frontend: [
         { name: "Next.js", icon: Code2 },
@@ -130,6 +133,7 @@ export const projects: Project[] = [
     ],
     tags: ["Ecommerce", "FullStack", "Sales & Marketing"],
     year: "2025",
+    duration: "2 months",
     techStack: {
       frontend: [
         { name: "Next.js", icon: Code2 },
@@ -165,36 +169,6 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "Carefront Health",
-    summary:
-      "Healthcare platform for home visits, delivery, and patient management.",
-    slug: "carefront-health",
-    description:
-      "A digital healthcare platform providing doctor home visits, drug delivery, service bookings, and patient record management through a simplified and mobile-friendly interface.",
-    link: "/projects/carefront-health",
-    url: "https://carefront-livid.vercel.app",
-    image: ["/shots/carefront-shot.png"],
-    tags: ["Web App", "FullStack", "HealthCare"],
-    year: "2025",
-    techStack: {
-      frontend: [
-        { name: "Next.js", icon: Code2 },
-        { name: "Shadcn", icon: Code2 },
-        { name: "TypeScript", icon: Code2 },
-        { name: "Tailwind CSS", icon: Code2 },
-      ],
-      backend: [
-        { name: "Node.js", icon: Server },
-        { name: "Mongodb", icon: Database },
-        { name: "Prisma", icon: Database },
-      ],
-      tools: [
-        { name: "Vercel", icon: Cloud },
-        { name: "Git", icon: GitBranch },
-      ],
-    },
-  },
-  {
     title: "Stur Solutions",
     summary:
       "Construction and real-estate website offering modern property services.",
@@ -203,9 +177,13 @@ export const projects: Project[] = [
       "A professional construction and real-estate platform showcasing architectural design, structural planning, cost analysis, and comprehensive land or property services for modern developments.",
     link: "/projects/stur-solutions",
     url: "https://stursolutions.com",
-    image: ["/shots/stur-solutions-shot.png"],
+    image: [
+      "/shots/stur-solutions-shot.png",
+      "/shots/stur-solutions-shot-2.png",
+    ],
     tags: ["Web App", "Frontend", "Construction"],
     year: "2025",
+    duration: "2 weeks",
     techStack: {
       frontend: [
         { name: "Next.js", icon: Code2 },
@@ -229,17 +207,18 @@ export const projects: Project[] = [
     },
   },
   {
-    title: "Betting Site",
+    title: "Carefront Health",
     summary:
-      "Job listing platform with advanced filtering and application tracking.",
-    slug: "betting-site",
+      "Healthcare platform for home visits, delivery, and patient management.",
+    slug: "carefront-health",
     description:
-      "A streamlined job listing platform enabling employers to post opportunities and applicants to search, filter, and track applications with a smooth and responsive interface.",
-    link: "/projects/job-board",
-    url: "https://carefront-livid.vercel.app/",
-    image: ["/shots/no-picture-available-icon.png"],
-    tags: ["SAAS", "FullStack", "Marketing"],
+      "A digital healthcare platform providing doctor home visits, drug delivery, service bookings, and patient record management through a simplified and mobile-friendly interface.",
+    link: "/projects/carefront-health",
+    url: "https://carefront-livid.vercel.app",
+    image: ["/shots/carefront-shot.png", "/shots/carefront-shot-1.png"],
+    tags: ["Web App", "FullStack", "HealthCare"],
     year: "2025",
+    duration: "1 month",
     techStack: {
       frontend: [
         { name: "Next.js", icon: Code2 },
@@ -249,14 +228,44 @@ export const projects: Project[] = [
       ],
       backend: [
         { name: "Node.js", icon: Server },
-        { name: "MySQL", icon: Database },
-        { name: "Astra Db Vector Embeddings", icon: Database },
+        { name: "Mongodb", icon: Database },
+        { name: "Prisma", icon: Database },
       ],
       tools: [
-        { name: "AWS", icon: Cloud },
-        { name: "Cloudflare DNS", icon: Cloud },
+        { name: "Vercel", icon: Cloud },
         { name: "Git", icon: GitBranch },
       ],
     },
   },
+  // {
+  //   title: "Job Board",
+  //   summary:
+  //     "Job listing platform with advanced filtering and application tracking.",
+  //   slug: "job-board",
+  //   description:
+  //     "A streamlined job listing platform enabling employers to post opportunities and applicants to search, filter, and track applications with a smooth and responsive interface.",
+  //   link: "/projects/job-board",
+  //   url: "https://carefront-livid.vercel.app/",
+  //   image: ["/shots/no-picture-available-icon.png"],
+  //   tags: ["SAAS", "FullStack", "Marketing"],
+  //   year: "2025",
+  //   techStack: {
+  //     frontend: [
+  //       { name: "Next.js", icon: Code2 },
+  //       { name: "Shadcn", icon: Code2 },
+  //       { name: "TypeScript", icon: Code2 },
+  //       { name: "Tailwind CSS", icon: Code2 },
+  //     ],
+  //     backend: [
+  //       { name: "Node.js", icon: Server },
+  //       { name: "MySQL", icon: Database },
+  //       { name: "Astra Db Vector Embeddings", icon: Database },
+  //     ],
+  //     tools: [
+  //       { name: "AWS", icon: Cloud },
+  //       { name: "Cloudflare DNS", icon: Cloud },
+  //       { name: "Git", icon: GitBranch },
+  //     ],
+  //   },
+  // },
 ];

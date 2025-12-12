@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <Hero />
       <CustomMarquee />
-      <Portfolio projects={projects.slice(0, 6)} />
+      <Portfolio projects={projects.slice(0, 4)} />
       <Services />
       <Footer />
     </div>

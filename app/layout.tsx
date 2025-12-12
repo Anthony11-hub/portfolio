@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "mk-ant",
-  description: "Sofware Developer: mk-ant",
+  title: "Anthony Mwaura",
+  description: "Sofware Developer",
 };
 
 export default function RootLayout({

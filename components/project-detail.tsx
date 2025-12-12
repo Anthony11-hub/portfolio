@@ -82,7 +82,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
                 Description
               </p>
               <h1 className="text-2xl md:text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-                Creating a POS solution for SMEs in Kenya
+                {project.summary}
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-7 md:leading-8 text-zinc-800 dark:text-zinc-400">
                 {project.description}
@@ -99,14 +99,21 @@ export default function ProjectDetail({ project }: { project: Project }) {
               <h1 className="text-xl md:text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
                 Tools
               </h1>
-              <p className="text-sm sm:text-base leading-6 sm:leading-7 md:leading-8 text-zinc-800 dark:text-zinc-400">
-                VsCode, Github, Github Actions, VPS
-              </p>
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.tools.map((tool, index) => (
+                  <p
+                    key={index}
+                    className="text-sm rounded-full border-2 border-black dark:border-accent px-2 sm:text-base leading-6 sm:leading-7 md:leading-8 text-zinc-800 dark:text-zinc-400"
+                  >
+                    {tool.name}
+                  </p>
+                ))}
+              </div>
               <h1 className="text-xl md:text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
                 Project Duration
               </h1>
               <p className="text-sm sm:text-base leading-6 sm:leading-7 md:leading-8 text-zinc-800 dark:text-zinc-400">
-                2 month(s)
+                {project.duration}
               </p>
             </div>
           </div>
