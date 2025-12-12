@@ -4,7 +4,7 @@ import { Separator } from "./ui/separator";
 
 export default function Footer() {
   return (
-    <div className="w-full bg-primary dark:bg-background z-50" id="footer">
+    <div className="w-full bg-primary dark:bg-background" id="footer">
       <div className="max-w-6xl mx-auto flex flex-col md:items-center justify-between text-background dark:text-gray-200 sm:border-x-2 border-gray-300 dark:border-accent py-6">
         <div className="w-full p-4 sm:p-6 md:p-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-6">
           {/* Header */}
@@ -32,17 +32,23 @@ export default function Footer() {
             Connect on Socials
           </h1>
           <div className="flex items-center justify-center gap-4">
-            <a href="" className="text-sm font-bold">
+            <a
+              href="mailto:tonycomputers6@gmail.com"
+              className="text-sm font-bold"
+            >
               email
             </a>
-            <a href="" className="text-sm font-bold">
+            <a
+              href="https://www.linkedin.com/in/anthony-mwaura-b08b69218/"
+              className="text-sm font-bold"
+            >
               linkedIn
             </a>
-            <a href="" className="text-sm font-bold">
+            <a
+              href="https://github.com/Anthony11-hub"
+              className="text-sm font-bold"
+            >
               github
-            </a>
-            <a href="" className="text-sm font-bold">
-              twitter
             </a>
           </div>
         </div>

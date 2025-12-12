@@ -35,7 +35,7 @@ export default function Sidebar({
             <div className="flex items-center justify-end gap-4 p-6 bg-black">
               <div className="hidden md:flex items-center border-r-2 border-black dark:border-accent rounded-full px-4 py-2 space-x-2 bg-yellow-400 text-black h-full">
                 <a href="mailto:tonycomputers6@gmail.com" className="text-sm">
-                  chat@m-an.dev
+                  Email Me
                 </a>
                 <MoveUpRight />
               </div>
@@ -58,13 +58,22 @@ export default function Sidebar({
                     My Work
                   </Link>
                   <a
-                    href="#"
+                    href="/Anthony2025-Fullstack-RoleCV.pdf"
+                    target="_blank"
                     className="block text-gray-400 hover:text-white text-2xl transition-colors"
                   >
                     Resume
                   </a>
                   <a
-                    href="#"
+                    href="https://github.com/Anthony11-hub"
+                    target="_blank"
+                    className="block text-gray-400 hover:text-white text-2xl transition-colors"
+                  >
+                    Github
+                  </a>
+                  <a
+                    href="https://medium.com/@anthonykm"
+                    target="_blank"
                     className="block text-gray-400 hover:text-white text-2xl transition-colors"
                   >
                     Blog
@@ -77,31 +86,24 @@ export default function Sidebar({
                 </h3>
                 <div className="flex gap-4 text-sm">
                   <a
-                    href="#"
+                    href="mailto:tonycomputers6@gmail.com"
                     className="text-white hover:text-yellow-400 transition-colors"
                   >
                     email
                   </a>
                   <span className="text-yellow-400">|</span>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/anthony-mwaura-b08b69218/"
                     className="text-white hover:text-yellow-400 transition-colors"
                   >
                     linkedin
                   </a>
                   <span className="text-yellow-400">|</span>
                   <a
-                    href="#"
+                    href="https://github.com/Anthony11-hub"
                     className="text-white hover:text-yellow-400 transition-colors"
                   >
-                    twitter
-                  </a>
-                  <span className="text-yellow-400">|</span>
-                  <a
-                    href="#"
-                    className="text-white hover:text-yellow-400 transition-colors"
-                  >
-                    behance
+                    github
                   </a>
                 </div>
               </div>

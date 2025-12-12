@@ -29,7 +29,7 @@ export default function Header() {
         <div className="h-14 flex items-center border-l-2 border-black dark:border-accent">
           <div className="hidden md:flex items-center border-r-2 border-black dark:border-accent px-4 py-1 space-x-2 bg-yellow-400 text-black h-full">
             <a href="mailto:tonycomputers6@gmail.com" className="text-sm">
-              chat@m-an.dev
+              Email Me
             </a>
             <MoveUpRight />
           </div>
